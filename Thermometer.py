@@ -12,7 +12,7 @@ from tkinter import ttk
 class FundraisingThermometer(tk.Tk):
     def __init__(self, goal):
         super().__init__()
-        self.title("Fundraising Thermometer")
+        self.title("Fundraising Goal Thermometer")
         self.geometry("300x600")
 
         self.goal = goal
@@ -73,6 +73,7 @@ class FundraisingThermometer(tk.Tk):
         height = (self.current_amount / self.goal) * 400
         self.canvas.coords(self.fill, 20, 400 - height, 80, 400)
         self.label_current.config(text=f"Current: ${self.current_amount}")
+
 
 # Runs the program and asks for user input for how much they want to fundraise
 if __name__ == "__main__":
